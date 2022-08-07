@@ -181,6 +181,15 @@ TODO
 
 ### onFrame
 
+installs a given (parameter-less) `callback` which is invoked whenever a new frame is going to be rendered. `onFrame` returns a function which may be used to uninstall the `callback` again.
+  
+```ts
+const uninstall = onFrame(() => {
+  console.log('next frame')
+})
+uninstall()
+```
+  
 TODO
 
 ### getCapabilities
